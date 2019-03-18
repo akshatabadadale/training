@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script>
+	function random() {
+		var a = document.getElementById('input').value;
+		if (a === "Electronics") {
+			var array = [ "Television", "Laptop", "Phone" ];
+		} else if (a === "Grocery") {
+			var array = [ "Soap", "Powder" ];
+		} else {
+			var array = [];
+		}
+		var string = "";
+		for (i = 0; i < array.length; i++) {
+			string = string + "<option>" + array[i] + "</option>";
+		}
+		string = "<select name='lol'>" + string + "</select>";
+		document.getElementById('output').innerHTML = string;
+	
+		function calculate() {
+    // Get the user's input from the form. Assume it is all valid
+    
+    
+    
+
+    a = Number(document.getElementById('QTY').value);
+
+    c = a * b;
+
+    document.getElementById('TOTAL').value = c;
+}
+		}
+    
+    
+</script>
+</head>
+<body bgcolor="aqua">
+
+	<table border="1">
+		<caption>
+			<h1>Product Details</h1>
+		</caption>
+
+
+		<tr>
+			<td>Category: <select id="input" onchange="random()">
+					<option>select category</option>
+					<option>Electronics</option>
+					<option>Grocery</option>
+			</select>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td>Product: <select id="output">
+					<option>select Product</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Quantity: <input type="number" id="QTY">
+			</td>
+		</tr>
+		<tr>
+			<td>Total Price: <input type="text">
+			</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Submit" onclick="calculate();">
+
+				<input type="button" value="Clear" onclick="calculate();"></td>
+		</tr>
+
+
+
+	</table>
+
+
+
+</body>
+
+</html>
